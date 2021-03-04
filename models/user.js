@@ -16,14 +16,7 @@ module.exports = Mongoose.model('User', new Mongoose.Schema({
         max: 11
     }
     address: {type: String, required: false},
-    phone: {
-        type: String,
-        required: false,
-        unique: true,
-        min: 10,
-        max: 10,
-
-    }
+    phone: {type: String, required: false}
 }, {
     toJSON: {
         getters: true,
