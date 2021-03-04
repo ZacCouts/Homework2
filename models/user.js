@@ -1,6 +1,13 @@
 const Mongoose = require('mongoose');
 
 module.exports = Mongoose.model('User', new Mongoose.Schema({
+    ssnumber {
+        type: String,
+        required: true,
+        unique: true,
+        min: 9,
+        max: 9
+    },
     firstName: {type: String, required: true},
     lastName: {type: String, required: true},
     age: {
@@ -8,13 +15,6 @@ module.exports = Mongoose.model('User', new Mongoose.Schema({
         required: true,
         min: 0
     },
-    ssnumber {
-        type: String,
-        required: true,
-        unique: true,
-        min: 11,
-        max: 11
-    }
     address: {type: String, required: false},
     phone: {type: String, required: false}
 }, {
