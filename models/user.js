@@ -1,7 +1,7 @@
 const Mongoose = require('mongoose');
 
 module.exports = Mongoose.model('User', new Mongoose.Schema({
-    ssnumber {
+    ssn {
         type: String,
         required: true,
         unique: true,
